@@ -15,8 +15,9 @@ jobs:
         cd build
         cmake -DCMAKE_BUILD_TYPE=Release ..
     - name: make
-      run: pwd; cd build; cmake --build . --config Release --parallel
+      run: cd build; cmake --build . --config Release --parallel
     - name: run tests
       run: |
+        cd build
         ./tests/tests '~[long_run]'
         ./tests/tests '[long_run]'
