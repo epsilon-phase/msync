@@ -42,7 +42,7 @@ matrix:
     env: CMAKE_GENERATOR="Visual Studio 15 2017" CMAKE_GENERATOR_PLATFORM=win32
 
 script:
-  - export BUILDTYPE=Release 
+  - export BUILDTYPE=Release VERBOSE=1
   - mkdir -p build
   - cd build
   - cmake --version
