@@ -13,9 +13,9 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake .. -DCMAKE_BUILD_TYPE=Release
+        cmake -DCMAKE_BUILD_TYPE=Release ..
     - name: make
-      run: cmake --build . --parallel
+      run: cmake --build . --config Release --parallel
     - name: run tests
       run: |
         ./tests/tests '~[long_run]'
